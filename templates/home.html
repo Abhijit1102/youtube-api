@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="home-body">
+    <form method="POST" action="{{ url_for('submit') }}">
+        <div class="content">
+            <h1 class="content">The Home page</h1>
+            <button id="content" type="submit" name="submit_button" value="Click Here">Click Here</button>
+        </div>
+    </form>
+</body>
+</html>

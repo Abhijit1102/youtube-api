@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Result Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+        <h1 id="container">Youtube Channel Review</h1>
+        <table >
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>URL</th>
+                    <th>Published Date</th>
+                    <th>Views</th>
+                    <th>Thumbnail URL</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for video in data %}
+                <tr>
+                    <td>{{ video.Title }}</td>
+                    <td>{{video.urls}}</td>
+                    <td>{{ video.Published_date }}</td>
+                    <td>{{ video.views }}</td>
+                    <td><a href="{{ video.urls }}"><img src="{{ video.thumbnail_url }}"></a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+</body>
+</html>
