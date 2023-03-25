@@ -3,6 +3,8 @@ from flask import Flask, render_template, redirect, url_for, request
 from googleapiclient.discovery import build
 import logging
 
+logging.basicConfig(filename="error.log", level = logging.ERROR)
+
 # // extract the channels 
 api_key ="AIzaSyAMZMPK66pQ39jJDv7oXOFTDpkboOzWUFg"
 
@@ -22,10 +24,8 @@ def home():
 
 
 @app.route('/result', methods=['GET'])
-
-try:
-        
-    def result():
+def result():
+    try:
         def get_video_ids(youtube, playlist_id):
             video_ids = []
             next_page_token = None
@@ -59,7 +59,7 @@ try:
                             urls=urls)
                 final.append(data)
             return final
-            
+                
         def get_video_details(youtube, video_ids):
             all_video_stats = []
             requests = youtube.videos().list(
@@ -78,14 +78,14 @@ try:
 
             return all_video_stats
 
-    # Get the channel data for the specified channel ID
+        # Get the channel data for the specified channel ID
         channel_data = getchannelStats(youtube, channel_id)
 
-        # Get the video IDs for the first playlist of the first channel
+            # Get the video IDs for the first playlist of the first channel
         playlist_id = channel_data[0]['playlist_id']
         video_ids = get_video_ids(youtube, playlist_id)[:5]
 
-        # Get the thumbnail URLs for the specified video IDs
+            # Get the thumbnail URLs for the specified video IDs
         thumbnail_urls = []
         for video_id in video_ids:
             request = youtube.videos().list(
@@ -94,19 +94,20 @@ try:
             )
             response = request.execute()
 
-            # Check if the response has any items
+                # Check if the response has any items
             if len(response["items"]) > 0:
                 # Extract the thumbnail URL from the response
                 thumbnail_url = response["items"][0]["snippet"]["thumbnails"]["high"]["url"]
                 # Append the thumbnail URL to the list
                 thumbnail_urls.append(thumbnail_url)
+            
             else:
-                print(f"No items found in response for video ID {video_id}.")
+                logging.ERROR(f"No items found in response for video ID {video_id}.")
 
-        # Get the video details for the specified video IDs
+            # Get the video details for the specified video IDs
         video_details = get_video_details(youtube, video_ids)
 
-        # Combine all the fetched data into a list of dictionaries
+            # Combine all the fetched data into a list of dictionaries
         data = []
         for i in range(len(video_details)):
             video_data = {
@@ -119,19 +120,17 @@ try:
             data.append(video_data)
 
         return render_template('result.html', data=data)
-except Exception as e:
-    logging.error(f"e")
+    except Exception as e:
+        logging.ERROR(f"e")
 
 
-@app.route('/submit', methods=['POST'])
-
-try:       
-    def submit():
+@app.route('/submit', methods=['POST'])       
+def submit():
+    try:
         if request.form['submit_button'] == 'Click Here':
             return redirect(url_for('result'))
-except Exception as e :
-    logging.error(f"e")
+    except Exception as e :
+       logging.ERROR(f"e")
 
 if __name__ == '__main__':
-    
-    app.run(debug=True)
+     app.run(host='127.0.0.1', port=8000, debug=True)
