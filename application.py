@@ -6,7 +6,7 @@ import logging
 logging.basicConfig(filename="error.log", level = logging.ERROR)
 
 # // extract the channels 
-api_key ="AIzaSyAMZMPK66pQ39jJDv7oXOFTDpkboOzWUFg"
+api_key ="AIzaSyAonXLNmWDSH3ByitcAEeE5Om4BvvnV5Z4"
 
 channel_id =["UCphU2bAGmw304CFAzy0Enuw"]
 # channel_ids = ','.join(channel_ids)
@@ -20,7 +20,7 @@ def home():
     try:
        return render_template('home.html')
     except Exception as e:
-        logging.error(f"e")
+        logging.error(f"{e}")
 
 
 @app.route('/result', methods=['GET'])
@@ -102,7 +102,7 @@ def result():
                 thumbnail_urls.append(thumbnail_url)
             
             else:
-                logging.ERROR(f"No items found in response for video ID {video_id}.")
+                logging.error(f"No items found in response for video ID {video_id}.")
 
             # Get the video details for the specified video IDs
         video_details = get_video_details(youtube, video_ids)
@@ -121,7 +121,7 @@ def result():
 
         return render_template('result.html', data=data)
     except Exception as e:
-        logging.ERROR(f"e")
+        logging.error(f"{e}")
 
 
 @app.route('/submit', methods=['POST'])       
@@ -130,7 +130,7 @@ def submit():
         if request.form['submit_button'] == 'Click Here':
             return redirect(url_for('result'))
     except Exception as e :
-       logging.ERROR(f"e")
+       logging.error(f"{e}")
 
 if __name__ == '__main__':
-     app.run(host='127.0.0.1', port=8000, debug=True)
+     app.run(host='0.0.0.0',port='8000',debug=True)

@@ -4,3 +4,100 @@ INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 113-225-236
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-225-236
+INFO:werkzeug: * Detected change in 'F:\\project\\youtube api\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-225-236
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:10:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:10:38] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:10:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:10:41] "[32mPOST /submit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:10:42] "[35m[1mGET /result HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:10:42] "GET /result?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:10:42] "GET /result?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:10:42] "GET /result?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:10:42] "[36mGET /result?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'F:\\project\\youtube api\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-225-236
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-225-236
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:13:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:13:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:13:19] "[32mPOST /submit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:13:20] "[35m[1mGET /result HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:13:20] "[36mGET /result?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:13:20] "[36mGET /result?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:13:20] "[36mGET /result?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'F:\\project\\youtube api\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-225-236
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:14:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:14:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:14:21] "[32mPOST /submit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:14:21] "[32mPOST /submit HTTP/1.1[0m" 302 -
+ERROR:root:<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCphU2bAGmw304CFAzy0Enuw&key=AIzaSyAMZMPK66pQ39jJDv7oXOFTDpkboOzWUFg&alt=json returned "Requests from referer <empty> are blocked.". Details: "[{'message': 'Requests from referer <empty> are blocked.', 'domain': 'global', 'reason': 'forbidden'}]">
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:14:22] "[35m[1mGET /result HTTP/1.1[0m" 500 -
+ERROR:root:The read operation timed out
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:15:21] "[35m[1mGET /result HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:15:22] "[36mGET /result?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:15:22] "[36mGET /result?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:15:23] "[36mGET /result?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'F:\\project\\youtube api\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-225-236
+INFO:werkzeug: * Detected change in 'F:\\project\\youtube api\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-225-236
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:16:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:16:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:16:48] "[32mPOST /submit HTTP/1.1[0m" 302 -
+ERROR:root:<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCphU2bAGmw304CFAzy0Enuw&key=AIzaSyAMZMPK66pQ39jJDv7oXOFTDpkboOzWUFg&alt=json returned "Requests from referer <empty> are blocked.". Details: "[{'message': 'Requests from referer <empty> are blocked.', 'domain': 'global', 'reason': 'forbidden'}]">
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:16:49] "[35m[1mGET /result HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:16:49] "[36mGET /result?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:16:49] "[36mGET /result?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2023 20:16:49] "[36mGET /result?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.255.112:8000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-225-236
+INFO:werkzeug: * Detected change in 'F:\\project\\youtube api\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-225-236
+INFO:werkzeug: * Detected change in 'F:\\project\\youtube api\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-225-236
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-225-236
+INFO:werkzeug: * Detected change in 'F:\\project\\youtube api\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-225-236
+INFO:werkzeug: * Detected change in 'F:\\project\\youtube api\\application.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-225-236
